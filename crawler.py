@@ -63,6 +63,10 @@ def get_news(oid, aid):
     return result
 
 
+def main(event, context=None):
+    return get_news(event['oid'], event['aid'])
+
+
 if __name__ == '__main__':
     result = get_news('001', '0010339290')
     pprint(result)
